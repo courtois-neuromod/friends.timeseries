@@ -15,12 +15,12 @@ source /home/mstlaure/links/projects/rrg-pbellec/mstlaure/cneuromod_extract_tser
 cd cneuromod_extract_tseries
 
 # launch job
-python -m timeseries.run dataset="friends" parcellation="gm_epi" subject_list=["${1}"] output_dir="../../voxel_native" data_dir="../../sourcedata"
+python -m timeseries.run dataset="friends" parcellation="gm_epi" subject_list=["${1}"] output_dir="../../timeseries/voxel_native" data_dir="../../sourcedata"
 
-mv ../../voxel_native/sub-${1}/func/sub-${1}_task-friends_space-T1w_label-GM_desc-indivBoldGMfromFS_mask.nii.gz ../../voxel_native/sub-${1}/sub-${1}_task-friends_space-T1w_label-GMfromFS_desc-indivFunc_mask.nii.gz
+mv ../../timeseries/voxel_native/sub-${1}/func/sub-${1}_task-friends_space-T1w_label-GM_desc-indivBoldGMfromFS_mask.nii.gz ../../timeseries/voxel_native/sub-${1}/sub-${1}_task-friends_space-T1w_label-GMfromFS_desc-indivFunc_mask.nii.gz
 
-mv ../../voxel_native/sub-${1}/func/sub-${1}_task-friends_space-T1w_atlas-Freesurfer_label-BoldGM_res-func_timeseries.h5 ../../voxel_native/sub-${1}/sub-${1}_task-friends_space-T1w_desc-voxelwise_timeseries.h5
+mv ../../timeseries/voxel_native/sub-${1}/func/sub-${1}_task-friends_space-T1w_atlas-Freesurfer_label-BoldGM_res-func_timeseries.h5 ../../timeseries/voxel_native/sub-${1}/sub-${1}_task-friends_space-T1w_desc-voxelwise_timeseries.h5
 
-rm -r ../../voxel_native/sub-${1}/func
+rm -r ../../timeseries/voxel_native/sub-${1}/func
 
 

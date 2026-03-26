@@ -15,13 +15,13 @@ source /home/mstlaure/links/projects/rrg-pbellec/mstlaure/cneuromod_extract_tser
 cd cneuromod_extract_tseries
 
 # launch job
-python -m timeseries.run dataset="friends" parcellation="schaefer1000_algo" subject_list=["${1}"] output_dir="../../schaefer1000" data_dir="../../sourcedata"
+python -m timeseries.run dataset="friends" parcellation="schaefer1000_algo" subject_list=["${1}"] output_dir="../../timeseries/schaefer1000" data_dir="../../sourcedata"
 
-mv ../../schaefer1000/sub-${1}/func/sub-${1}_task-friends_space-MNI152NLin2009cAsym_atlas-Schaefer18_desc-1000Parcels7Networks_dseg.nii.gz ../../schaefer1000/sub-${1}/sub-${1}_task-friends_space-MNI152NLin2009cAsym_atlas-Schaefer2018_desc-1000Parcels7Networks_dseg.nii.gz
+mv ../../timeseries/schaefer1000/sub-${1}/func/sub-${1}_task-friends_space-MNI152NLin2009cAsym_atlas-Schaefer18_desc-1000Parcels7Networks_dseg.nii.gz ../../timeseries/schaefer1000/sub-${1}/sub-${1}_task-friends_space-MNI152NLin2009cAsym_atlas-Schaefer2018_desc-1000Parcels7Networks_dseg.nii.gz
 
-mv ../../schaefer1000/sub-${1}/func/sub-${1}_task-friends_space-MNI152NLin2009cAsym_atlas-Schaefer18_desc-1000Parcels7Networks_timeseries.h5 ../../schaefer1000/sub-${1}/sub-${1}_task-friends_space-MNI152NLin2009cAsym_atlas-Schaefer2018_desc-1000Parcels7Networks_timeseries.h5
+mv ../../timeseries/schaefer1000/sub-${1}/func/sub-${1}_task-friends_space-MNI152NLin2009cAsym_atlas-Schaefer18_desc-1000Parcels7Networks_timeseries.h5 ../../timeseries/schaefer1000/sub-${1}/sub-${1}_task-friends_space-MNI152NLin2009cAsym_atlas-Schaefer2018_desc-1000Parcels7Networks_timeseries.h5
 
-mv ../../schaefer1000/sub-${1}/func/sub-${1}_task-friends_space-MNI152NLin2009cAsym_label-GM_desc-indivBoldGMfromAlgo_mask.nii.gz ../../schaefer1000/sub-${1}/sub-${1}_task-friends_space-MNI152NLin2009cAsym_label-GMfromTemplate_desc-indivFunc_mask.nii.gz
+mv ../../timeseries/schaefer1000/sub-${1}/func/sub-${1}_task-friends_space-MNI152NLin2009cAsym_label-GM_desc-indivBoldGMfromAlgo_mask.nii.gz ../../timeseries/schaefer1000/sub-${1}/sub-${1}_task-friends_space-MNI152NLin2009cAsym_label-GMfromTemplate_desc-indivFunc_mask.nii.gz
 
-rm -r ../../schaefer1000/sub-${1}/func
+rm -r ../../timeseries/schaefer1000/sub-${1}/func
 
